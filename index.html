@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ulangan Harian Bahasa Indonesia – Fiksi/Nonfiksi dan Teks Resensi</title>
+<style>
+:root{--bg:#f4ecdc;--sf:#fffaf0;--tx:#2b1d16;--mu:#6f5d51;--pr:#7a1f2e;--pt:#fff8ec;--bd:#dccdb4;--ac:#b8862b;--hl:#f0c75e;--tl:#1f6f78;--sp:#3a2118;--ok:#1d7a45;--er:#b3261e;--wa:#a85b00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{--bg:#17110e;--sf:#241b16;--tx:#f2e9d9;--mu:#b5a592;--pr:#e59aa4;--pt:#1b1410;--bd:#43352c;--ac:#e3b45d;--tl:#5cc0c8;--sp:#0f0a08;--ok:#5fd68f;--er:#ff8a80;--wa:#ffb74d}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg) radial-gradient(rgba(120,90,50,.07) 1px,transparent 1px) 0 0/22px 22px;color:var(--tx);font:17px/1.65 'Lora',Georgia,'Times New Roman',serif;user-select:none;-webkit-user-select:none}
+h1,h2,.big,#tm{font-family:'Fraunces','Lora',Georgia,serif;letter-spacing:-.01em}
+textarea,input{user-select:text;-webkit-user-select:text}
+.w{max-width:720px;margin:0 auto;padding:18px 16px 40px}
+.c{background:var(--sf);border:1px solid var(--bd);border-left:9px solid var(--pr);border-radius:6px 18px 18px 6px;padding:22px 22px 22px 24px;margin-bottom:18px;box-shadow:4px 5px 0 var(--bd);position:relative}
+h1{font-size:28px;line-height:1.15;margin:0 0 8px;font-weight:800}h2{font-size:20px;margin:0 0 10px;font-weight:600}
+.mu{color:var(--mu);font-size:14px}
+input,select,textarea{width:100%;font:inherit;padding:11px 14px;border:1.5px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);margin:6px 0 14px}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--hl);border-color:var(--pr)}
+label{font-weight:600;font-size:15px}
+button{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:10px;padding:11px 22px;background:var(--pr);color:var(--pt);transition:transform .12s;box-shadow:0 3px 0 rgba(0,0,0,.22)}
+button:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.22)}button:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+button:disabled{opacity:.4;cursor:not-allowed}
+button.g{background:transparent;color:var(--tx);border:1.5px solid var(--bd);box-shadow:none}
+button.d{background:var(--er);color:var(--pt)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--sp);color:#f7ead4;padding:10px 18px;border-bottom:3px solid var(--ac);border-radius:0 0 14px 14px;font-size:14px;font-weight:600}
+#tm{font-size:22px;font-weight:800;background:var(--hl);color:#2b1d16;padding:2px 14px;border-radius:8px}
+#vc{background:rgba(255,255,255,.14);padding:3px 12px;border-radius:8px}
+#qa{counter-reset:opt;padding-right:56px}
+#qa::after{content:'';position:absolute;top:-1px;right:20px;width:22px;height:46px;background:var(--ac);clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%)}
+.o{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--bd);border-radius:12px;margin:10px 0;cursor:pointer;position:relative;counter-increment:opt;background:var(--bg)}
+.o::before{content:counter(opt,upper-alpha);flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:14px;background:var(--sf);color:var(--pr);border:1.5px solid var(--bd)}
+.o.b::before{content:'●';font-size:10px}
+.o input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.o:has(input:checked){background:var(--pr);color:var(--pt);border-color:var(--pr)}
+.o:has(input:checked)::before{background:var(--hl);color:#2b1d16;border-color:var(--hl)}
+.o:has(input:focus-visible){outline:3px solid var(--hl);outline-offset:2px}
+.tx{margin:12px 0;padding:14px 16px 14px 18px;background:var(--bg);border-left:4px solid var(--ac);border-radius:4px 14px 14px 4px;font-style:italic;font-size:16px;line-height:1.7}
+.nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:8px}
+.nav button{padding:0;height:42px;border-radius:50%;background:var(--sf);color:var(--tx);border:1.5px solid var(--bd);font-size:14px;box-shadow:none;font-family:'Fraunces',Georgia,serif}
+.nav .a{background:var(--tl);color:var(--pt);border-color:var(--tl)}
+.nav .n{box-shadow:0 0 0 3px var(--sf),0 0 0 6px var(--ac)}
+.row{display:flex;justify-content:space-between;gap:10px;margin-top:16px}
+.m{position:fixed;inset:0;background:rgba(23,14,10,.85);display:flex;align-items:center;justify-content:center;padding:20px;z-index:20}
+.m>div{background:var(--sf);border:2px solid var(--ac);border-left:10px solid var(--pr);border-radius:6px 20px 20px 6px;padding:26px;max-width:440px;width:100%;box-shadow:8px 8px 0 rgba(0,0,0,.3)}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:2px 12px;border-radius:6px;background:var(--tl);color:var(--pt);font-family:'Fraunces',Georgia,serif}
+.big{font-size:64px;font-weight:800;color:var(--ac);line-height:1}
+.hide{display:none}
+pre{white-space:pre-wrap;word-break:break-all;background:var(--bg);padding:10px;border-radius:10px;font-size:12px;max-height:120px;overflow:auto;user-select:text}
+.lg{min-height:100vh;display:grid}
+.hero{background:linear-gradient(165deg,#6b1a2b,#2e0b14);color:#fbefd9;padding:40px 24px 0;display:flex;flex-direction:column;justify-content:center;border-radius:0 0 30px 30px;overflow:hidden}
+.hero h1{font-size:clamp(40px,11vw,76px);font-weight:800;line-height:1;margin:18px 0 12px}
+.hero h1 em{color:#f0c75e}.hero h1 u{text-decoration:none;color:#7fd6dc}
+.hero p{margin:0 0 18px;font-size:18px;font-weight:600}
+.chip{align-self:flex-start;background:#f0c75e;color:#2b1d16;font-weight:700;font-size:14px;padding:4px 14px;border-radius:6px;font-family:'Fraunces',Georgia,serif}
+.rl{margin:0;padding-left:20px;font-size:15px;max-width:440px;opacity:.92}.rl li{margin:6px 0}
+.shelf{display:flex;align-items:flex-end;gap:4px;margin:34px 0 0;border-bottom:10px solid #8a5a34;padding:0 6px}
+.shelf i{display:flex;align-items:center;justify-content:center;width:var(--w);height:var(--h);background:var(--c);border-radius:3px 3px 0 0;box-shadow:inset 0 7px 0 rgba(255,255,255,.2),inset 0 -7px 0 rgba(0,0,0,.18);writing-mode:vertical-rl;font:700 10px/1 'Fraunces',Georgia,serif;letter-spacing:.14em;color:rgba(255,255,255,.92);font-style:normal}
+.shelf i.l{transform:rotate(9deg);transform-origin:bottom left;margin-left:10px}
+.fm{padding:28px 24px 40px;max-width:460px;width:100%;margin:0 auto;align-self:center}
+@media(min-width:820px){.lg{grid-template-columns:1.1fr 1fr}.hero{border-radius:0 30px 30px 0;padding:60px 60px 0}.fm{padding:40px}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800;1,600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app"></div>
+<script>
+const DUR=60,MAX=3,KEY="ulangan_resensi_v1"; // MAX harus sama dengan MAX di Code.gs
+const SUARA_VOL=0.6; // volume bip: 0.1 pelan, 0.6 sedang-keras, 1 maksimal
+const SUARA=true; // true = bunyi bip saat pelanggaran, false = senyap
+const SHEET_URL="https://script.google.com/macros/s/AKfycbwSrZw_LqTNDprGJtQyArknHorew8q8j_pUVsTq-jXkumOWh__dANx0-aMq0mVi200I/exec"; // WAJIB: tempel URL Web App Apps Script (berakhiran /exec). Token, kata sandi guru, kunci & penilaian ada di Code.gs
+const $=id=>document.getElementById(id);
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const Q=[];
+const pg=(t,o)=>Q.push({y:'pg',t,o});
+const pk=(t,o)=>Q.push({y:'pk',t,o});
+const bs=t=>Q.push({y:'bs',t});
+const mt=(t,p,o)=>Q.push({y:'mt',t,p,o});
+const es=t=>Q.push({y:'es',t});
+pg("Buku fiksi adalah buku yang berisi ...",["kejadian nyata berdasarkan fakta","cerita rekaan hasil imajinasi pengarang","kumpulan data statistik","panduan langkah kerja"]);
+pg("Buku nonfiksi adalah buku yang berisi ...",["cerita rekaan tentang tokoh imajiner","karya hasil khayalan pengarang","informasi atau pengetahuan berdasarkan fakta","dongeng dan legenda"]);
+pg("Berikut ini yang merupakan ciri buku fiksi adalah ...",["memuat tokoh, alur, dan latar rekaan","disusun dengan data yang harus dibuktikan","menggunakan daftar pustaka ilmiah","berisi rumus dan grafik"]);
+pg("Ciri buku nonfiksi yang tepat adalah ...",["tokohnya hanya hasil imajinasi","bahasanya lugas dan isinya dapat dibuktikan kebenarannya","alurnya berliku dan penuh kejutan","memiliki amanat yang disampaikan lewat konflik tokoh"]);
+pg("Tujuan utama pengarang menulis buku fiksi adalah ...",["menghibur pembaca dan menyampaikan pesan melalui cerita","memberikan data penelitian","menyajikan petunjuk penggunaan alat","menyusun laporan kegiatan"]);
+pg("Tujuan utama penulis menulis buku nonfiksi adalah ...",["menghibur lewat tokoh rekaan","mengajak pembaca berimajinasi","memberikan informasi dan pengetahuan yang faktual","menciptakan dunia khayalan"]);
+pg("Berikut ini yang termasuk buku nonfiksi adalah ...",["novel Dilan 1990","novel Laskar Pelangi","novel Perahu Kertas","biografi tokoh nasional"]);
+pg("Teks resensi adalah teks yang berisi ...",["cerita rekaan tentang tokoh","ulasan atau penilaian terhadap suatu karya, seperti buku","langkah-langkah membuat sesuatu","ajakan membeli produk"]);
+pg("Tujuan teks resensi adalah ...",["memberi pertimbangan kepada pembaca apakah suatu karya layak dibaca atau tidak","menghibur pembaca dengan cerita","menjelaskan proses terjadinya peristiwa","menceritakan pengalaman pribadi"]);
+pg("Bagian resensi yang memuat judul, penulis, penerbit, dan tahun terbit disebut ...",["sinopsis","rekomendasi","identitas buku","kelemahan buku"]);
+pg("Kata seperti menarik, inspiratif, dan memukau dalam resensi termasuk ...",["kata kerja material","kata sifat yang bermakna penilaian","kata ganti orang","kata seru"]);
+pg("Konjungsi yang digunakan untuk menghubungkan kelebihan dan kekurangan buku dalam resensi adalah ...",["karena","sehingga","namun","dan"]);
+pg("Kalimat yang berisi pendapat penulis resensi tentang buku disebut kalimat ...",["fakta","opini atau evaluatif","perintah","seruan"]);
+pg("Konjungsi sehingga pada kalimat “Gaya bahasanya ringan sehingga pembaca merasa dekat dengan tokoh” menyatakan hubungan ...",["akibat","pertentangan","waktu","syarat"]);
+pg("Perhatikan resensi berikut!\n“Novel Dilan 1990 karya Pidi Baiq mengisahkan Milea, siswi pindahan dari Jakarta ke Bandung pada tahun 1990, yang bertemu Dilan, siswa SMA yang unik dan romantis. Gaya bahasanya ringan dan santai serta memakai sudut pandang orang pertama sehingga pembaca merasa dekat dengan tokoh. Kelebihan novel ini terletak pada dialognya yang segar dan lucu. Namun, beberapa bagian cerita terasa terlalu panjang dan kurang mendalam dalam menggambarkan konflik. Novel ini sangat cocok dibaca remaja yang menyukai kisah cinta masa sekolah.”\nBerdasarkan resensi, kelebihan novel Dilan 1990 terletak pada ...",["latar yang sangat hidup","dialog yang segar dan lucu","istilah ilmiah yang lengkap","alur yang sangat rumit"]);
+pg("Perhatikan resensi berikut!\n“Novel Dilan 1990 karya Pidi Baiq mengisahkan Milea, siswi pindahan dari Jakarta ke Bandung pada tahun 1990, yang bertemu Dilan, siswa SMA yang unik dan romantis. Gaya bahasanya ringan dan santai serta memakai sudut pandang orang pertama sehingga pembaca merasa dekat dengan tokoh. Kelebihan novel ini terletak pada dialognya yang segar dan lucu. Namun, beberapa bagian cerita terasa terlalu panjang dan kurang mendalam dalam menggambarkan konflik. Novel ini sangat cocok dibaca remaja yang menyukai kisah cinta masa sekolah.”\nKekurangan novel Dilan 1990 menurut resensi tersebut adalah ...",["bahasanya sulit dipahami","tokohnya terlalu banyak","beberapa bagian terlalu panjang dan kurang mendalam dalam menggambarkan konflik","ceritanya tidak memiliki tokoh utama"]);
+pg("Perhatikan resensi berikut!\n“Laskar Pelangi karya Andrea Hirata bercerita tentang sepuluh anak di Belitung yang bersekolah di SD Muhammadiyah yang serba kekurangan. Dengan bimbingan Bu Muslimah dan Pak Harfan, mereka tetap bersemangat mengejar mimpi. Novel ini menginspirasi pembaca untuk menghargai pendidikan dan guru. Keunggulannya, penulis menggambarkan latar dengan sangat hidup. Kekurangannya, banyak istilah daerah dan ilmiah yang mungkin sulit dipahami pembaca pemula. Buku ini layak dibaca oleh pelajar dan guru.”\nKalimat rekomendasi dalam resensi Laskar Pelangi adalah ...",["Laskar Pelangi karya Andrea Hirata bercerita tentang sepuluh anak di Belitung.","Penulis menggambarkan latar dengan sangat hidup.","Banyak istilah daerah dan ilmiah yang sulit dipahami.","Buku ini layak dibaca oleh pelajar dan guru."]);
+pg("Perhatikan resensi berikut!\n“Laskar Pelangi karya Andrea Hirata bercerita tentang sepuluh anak di Belitung yang bersekolah di SD Muhammadiyah yang serba kekurangan. Dengan bimbingan Bu Muslimah dan Pak Harfan, mereka tetap bersemangat mengejar mimpi. Novel ini menginspirasi pembaca untuk menghargai pendidikan dan guru. Keunggulannya, penulis menggambarkan latar dengan sangat hidup. Kekurangannya, banyak istilah daerah dan ilmiah yang mungkin sulit dipahami pembaca pemula. Buku ini layak dibaca oleh pelajar dan guru.”\nKelemahan novel Laskar Pelangi menurut resensi adalah ...",["alurnya terlalu cepat","banyak istilah daerah dan ilmiah yang sulit dipahami pembaca pemula","tidak ada tokoh guru","latarnya kurang jelas"]);
+pg("Perhatikan resensi berikut!\n“Perahu Kertas karya Dee Lestari mengisahkan Kugy, gadis penyuka dongeng, dan Keenan, pemuda berbakat melukis. Mereka mengejar impian di jalan masing-masing sambil bergulat dengan perasaan. Kelebihannya, alur menarik dan karakter tokohnya kuat. Kelemahannya, tebal buku membuat pembaca membutuhkan kesabaran. Novel ini direkomendasikan bagi pembaca yang ingin belajar berani mengikuti passion.”\nKalimat yang menyatakan kelebihan novel Perahu Kertas adalah ...",["Alur menarik dan karakter tokohnya kuat.","Tebal buku membutuhkan kesabaran pembaca.","Kugy adalah gadis penyuka dongeng.","Keenan berbakat melukis."]);
+pg("Perhatikan resensi berikut!\n“Perahu Kertas karya Dee Lestari mengisahkan Kugy, gadis penyuka dongeng, dan Keenan, pemuda berbakat melukis. Mereka mengejar impian di jalan masing-masing sambil bergulat dengan perasaan. Kelebihannya, alur menarik dan karakter tokohnya kuat. Kelemahannya, tebal buku membuat pembaca membutuhkan kesabaran. Novel ini direkomendasikan bagi pembaca yang ingin belajar berani mengikuti passion.”\nPembaca yang disarankan membaca Perahu Kertas menurut resensi adalah ...",["pembaca yang menyukai sejarah perang","pembaca yang ingin belajar berani mengikuti passion","pembaca yang mencari buku panduan","pembaca yang tidak suka cerita"]);
+pk("Pilih SEMUA ciri buku fiksi!",["Memuat tokoh, alur, dan latar","Dibuat dengan imajinasi pengarang","Informasinya harus akurat dan dapat diverifikasi","Bahasanya cenderung estetis dan konotatif"]);
+pk("Pilih SEMUA ciri buku nonfiksi!",["Berisi fakta dan data","Bahasanya lugas dan denotatif","Tokoh dan peristiwanya rekaan","Disusun secara sistematis dan objektif"]);
+pk("Pilih SEMUA contoh buku fiksi!",["Novel Perahu Kertas","Kamus Besar Bahasa Indonesia","Novel Laskar Pelangi","Atlas dunia","Novel Dilan 1990"]);
+pk("Pilih SEMUA contoh buku nonfiksi!",["Biografi","Novel remaja","Buku sejarah","Ensiklopedia","Cerpen"]);
+pk("Pilih SEMUA tujuan teks resensi!",["Memberi gambaran isi buku","Membantu pembaca menentukan layak tidaknya buku dibaca","Menjiplak isi buku","Memberi penilaian kelebihan dan kekurangan buku","Memaksa pembaca membeli buku"]);
+pk("Pilih SEMUA bagian yang terdapat dalam struktur teks resensi!",["Identitas buku","Sinopsis atau ringkasan isi","Kelebihan dan kekurangan buku","Rekomendasi atau penutup","Tabel data statistik"]);
+pk("Pilih SEMUA kaidah kebahasaan teks resensi!",["Menggunakan kata sifat bermakna penilaian","Menggunakan konjungsi pertentangan (namun, tetapi)","Memuat kalimat fakta dan kalimat opini","Seluruhnya memakai bahasa tidak baku","Setiap paragraf diakhiri kalimat seruan"]);
+pk("Perhatikan resensi berikut!\n“Novel Dilan 1990 karya Pidi Baiq mengisahkan Milea, siswi pindahan dari Jakarta ke Bandung pada tahun 1990, yang bertemu Dilan, siswa SMA yang unik dan romantis. Gaya bahasanya ringan dan santai serta memakai sudut pandang orang pertama sehingga pembaca merasa dekat dengan tokoh. Kelebihan novel ini terletak pada dialognya yang segar dan lucu. Namun, beberapa bagian cerita terasa terlalu panjang dan kurang mendalam dalam menggambarkan konflik. Novel ini sangat cocok dibaca remaja yang menyukai kisah cinta masa sekolah.”\nPilih SEMUA kalimat yang berupa FAKTA dalam resensi Dilan 1990!",["Novel ini karya Pidi Baiq.","Dialognya segar dan lucu.","Milea adalah siswi pindahan dari Jakarta ke Bandung.","Novel ini sangat cocok dibaca remaja.","Latar cerita terjadi pada tahun 1990."]);
+pk("Perhatikan resensi berikut!\n“Laskar Pelangi karya Andrea Hirata bercerita tentang sepuluh anak di Belitung yang bersekolah di SD Muhammadiyah yang serba kekurangan. Dengan bimbingan Bu Muslimah dan Pak Harfan, mereka tetap bersemangat mengejar mimpi. Novel ini menginspirasi pembaca untuk menghargai pendidikan dan guru. Keunggulannya, penulis menggambarkan latar dengan sangat hidup. Kekurangannya, banyak istilah daerah dan ilmiah yang mungkin sulit dipahami pembaca pemula. Buku ini layak dibaca oleh pelajar dan guru.”\nPilih SEMUA pernyataan yang sesuai dengan resensi Laskar Pelangi!",["Ceritanya tentang sepuluh anak di Belitung.","Para tokoh dibimbing Bu Muslimah dan Pak Harfan.","Latar digambarkan dengan sangat hidup.","Kelemahannya adalah alur yang terlalu cepat.","Buku ini layak dibaca pelajar dan guru."]);
+pk("Perhatikan resensi berikut!\n“Perahu Kertas karya Dee Lestari mengisahkan Kugy, gadis penyuka dongeng, dan Keenan, pemuda berbakat melukis. Mereka mengejar impian di jalan masing-masing sambil bergulat dengan perasaan. Kelebihannya, alur menarik dan karakter tokohnya kuat. Kelemahannya, tebal buku membuat pembaca membutuhkan kesabaran. Novel ini direkomendasikan bagi pembaca yang ingin belajar berani mengikuti passion.”\nPilih SEMUA pernyataan yang sesuai dengan resensi Perahu Kertas!",["Kugy menyukai dongeng.","Keenan berbakat melukis.","Kelemahannya karena bukunya terlalu tipis.","Kelebihannya adalah alur menarik dan karakter kuat.","Penulisnya adalah Andrea Hirata."]);
+bs("Novel Laskar Pelangi tergolong buku fiksi karena berbentuk novel yang berisi cerita rekaan.");
+bs("Ensiklopedia termasuk buku fiksi karena tokoh dan ceritanya merupakan karangan.");
+bs("Resensi bertujuan menilai buku sehingga resensi harus memuat kelebihan dan kekurangan buku.");
+bs("Resensi yang hanya memuji buku tanpa menyebut kekurangan tetap dapat dikatakan objektif.");
+bs("Buku nonfiksi bertujuan memberi informasi faktual sehingga isinya harus dapat dibuktikan kebenarannya.");
+bs("Resensi Dilan 1990 menyebut beberapa bagian cerita terlalu panjang, maka resensi itu pasti melarang pembaca membaca novel tersebut.");
+bs("Biografi tokoh nyata termasuk buku nonfiksi sebab berisi kisah hidup berdasarkan fakta.");
+bs("Konjungsi namun cocok menghubungkan kelebihan dengan kekurangan buku karena menyatakan pertentangan.");
+bs("Penulis resensi menyebut Laskar Pelangi karya Dee Lestari, sehingga identitas bukunya sudah benar.");
+bs("Resensi Perahu Kertas menyebut buku ini tebal, sehingga hal itu termasuk kelemahan karena pembaca perlu kesabaran.");
+es("Jelaskan perbedaan buku fiksi dan nonfiksi! Bandingkan dari segi pengertian, ciri, dan tujuannya.");
+es("Jelaskan pengertian dan tujuan teks resensi, lalu sebutkan empat bagian struktur teks resensi!");
+es("Perhatikan resensi berikut!\n“Novel Dilan 1990 karya Pidi Baiq mengisahkan Milea, siswi pindahan dari Jakarta ke Bandung pada tahun 1990, yang bertemu Dilan, siswa SMA yang unik dan romantis. Gaya bahasanya ringan dan santai serta memakai sudut pandang orang pertama sehingga pembaca merasa dekat dengan tokoh. Kelebihan novel ini terletak pada dialognya yang segar dan lucu. Namun, beberapa bagian cerita terasa terlalu panjang dan kurang mendalam dalam menggambarkan konflik. Novel ini sangat cocok dibaca remaja yang menyukai kisah cinta masa sekolah.”\nSebutkan dua kaidah kebahasaan teks resensi, lalu berikan contohnya dari resensi tersebut!");
+es("Perhatikan resensi berikut!\n“Laskar Pelangi karya Andrea Hirata bercerita tentang sepuluh anak di Belitung yang bersekolah di SD Muhammadiyah yang serba kekurangan. Dengan bimbingan Bu Muslimah dan Pak Harfan, mereka tetap bersemangat mengejar mimpi. Novel ini menginspirasi pembaca untuk menghargai pendidikan dan guru. Keunggulannya, penulis menggambarkan latar dengan sangat hidup. Kekurangannya, banyak istilah daerah dan ilmiah yang mungkin sulit dipahami pembaca pemula. Buku ini layak dibaca oleh pelajar dan guru.”\nAnalisislah resensi tersebut: tuliskan ringkasan isi, kelebihan, kekurangan, dan rekomendasi penulis resensi!");
+es("Perhatikan dua resensi berikut!\nResensi 1: “Novel Dilan 1990 karya Pidi Baiq mengisahkan Milea, siswi pindahan dari Jakarta ke Bandung pada tahun 1990, yang bertemu Dilan, siswa SMA yang unik dan romantis. Gaya bahasanya ringan dan santai serta memakai sudut pandang orang pertama sehingga pembaca merasa dekat dengan tokoh. Kelebihan novel ini terletak pada dialognya yang segar dan lucu. Namun, beberapa bagian cerita terasa terlalu panjang dan kurang mendalam dalam menggambarkan konflik. Novel ini sangat cocok dibaca remaja yang menyukai kisah cinta masa sekolah.”\nResensi 2: “Perahu Kertas karya Dee Lestari mengisahkan Kugy, gadis penyuka dongeng, dan Keenan, pemuda berbakat melukis. Mereka mengejar impian di jalan masing-masing sambil bergulat dengan perasaan. Kelebihannya, alur menarik dan karakter tokohnya kuat. Kelemahannya, tebal buku membuat pembaca membutuhkan kesabaran. Novel ini direkomendasikan bagi pembaca yang ingin belajar berani mengikuti passion.”\nTuliskan satu kelebihan dan satu kekurangan masing-masing novel, lalu tentukan novel yang lebih ingin kamu baca beserta alasannya!");
+const NO=Q.filter(q=>q.y!=='es').length;
+const TY={pg:'Pilihan Ganda',pk:'Pilihan Ganda Kompleks',bs:'Logis / Tidak Logis',mt:'Menjodohkan',es:'Esai'};
+let S=null;try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const app=$('app');let timer,last=0,devo=false,locked=false;
+const IS_MOBILE=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)||matchMedia('(pointer:coarse)').matches;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=t=>t.split('\n').map(l=>/^(Resensi \d: )?“/.test(l)?`<blockquote class="tx">${esc(l)}</blockquote>`:`<p style="margin:10px 0">${esc(l)}</p>`).join('');
+function login(msg){
+ app.innerHTML=`<div class="lg"><section class="hero"><span class="chip">Ulangan Harian · Bahasa Indonesia</span><h1><em>Fiksi</em>, <u>Nonfiksi</u> &amp; Resensi</h1><p>${NO+5} soal (${NO} objektif + 5 esai) · ${DUR} menit</p><ul class="rl"><li>Ujian berjalan dalam layar penuh.</li><li>Pindah tab, keluar layar penuh, salin/tempel, dan memuat ulang halaman dicatat sebagai pelanggaran.</li><li>Pelanggaran ke-${MAX} mengumpulkan ujian otomatis dan dilaporkan ke guru.</li></ul><div class="shelf"><i style="--h:70px;--w:22px;--c:#c9a24a"></i><i style="--h:98px;--w:32px;--c:#8a1f35">FIKSI</i><i style="--h:80px;--w:26px;--c:#f3e6c8;color:#5a3a1a">NOVEL</i><i style="--h:112px;--w:34px;--c:#1f6f78">NONFIKSI</i><i style="--h:74px;--w:22px;--c:#d9763a"></i><i style="--h:102px;--w:30px;--c:#2f5d3a">RESENSI</i><i style="--h:86px;--w:24px;--c:#5b3a7a"></i><i class="l" style="--h:92px;--w:26px;--c:#a8542e"></i></div></section>
+ <section class="fm"><h2>📖 Masuk ujian</h2>${msg?`<div style="color:var(--er);font-weight:600;margin-bottom:8px">${msg}</div>`:''}
+ <label>Nama lengkap<input id="nm" autocomplete="off"></label><label>Kelas<input id="kl" placeholder="mis. 8A" autocomplete="off"></label><label>Token ujian (dari guru)<input id="tk" autocomplete="off"></label>
+ <button onclick="begin()">Mulai ujian</button> <button class="g" onclick="teacher()">Mode Guru</button></section></div>`;
+}
+async function begin(){
+ const nm=$('nm').value.trim(),kl=$('kl').value.trim(),tk=$('tk').value.trim();
+ if(!nm||!kl||!tk)return login('Nama, kelas, dan token wajib diisi.');
+ if(!SHEET_URL)return login('Alamat server (SHEET_URL) belum diisi di file HTML. Hubungi guru.');
+ const keluarFS=()=>{try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}};
+ audioInit();fs();
+ let j;
+ try{j=await(await fetch(SHEET_URL+'?'+new URLSearchParams({a:'start',tk,n:nm,k:kl}))).json()}
+ catch(e){keluarFS();return login('Tidak dapat terhubung ke server. Periksa internet lalu coba lagi.')}
+ if(!j.ok){keluarFS();return login(j.err==='token'?'Token ujian salah.':j.err==='closed'?'Ujian belum dibuka atau sudah ditutup oleh guru.':'Gagal memulai ujian. Periksa nama dan kelas.')}
+ const g={};Q.forEach((q,i)=>(g[q.y]=g[q.y]||[]).push(i));
+ const order=[].concat(...Object.keys(g).map(k=>sh(g[k])));
+ const perm=Q.map(q=>q.o?sh(q.o.map((_,i)=>i)):null);
+ S={nm,kl,order,perm,ans:{},viol:[],i:0,start:Date.now(),id:j.id,sig:j.sig,done:false,nodes:0};save();
+ audioInit();fs();run();
+}
+let AC=null,pendBip=0;
+function audioInit(){if(!SUARA)return;
+ try{
+  // iOS: abaikan tombol silent, anggap audio sebagai "playback"
+  if(navigator.audioSession)navigator.audioSession.type='playback';
+  if(!AC||AC.state==='closed'){
+   AC=new(window.AudioContext||window.webkitAudioContext)();
+   AC.onstatechange=()=>{if(AC.state!=='running'&&!document.hidden)AC.resume().catch(()=>{})};
+  }
+  if(AC.state!=='running'){
+   // iOS menandai 'interrupted' (bukan hanya 'suspended') setelah pindah app/layar
+   AC.resume().then(flushBip).catch(()=>{});
+   const b=AC.createBuffer(1,1,22050),s=AC.createBufferSource();s.buffer=b;s.connect(AC.destination);s.start(0);
+  }
+ }catch(e){}
+}
+function flushBip(){if(pendBip&&AC&&AC.state==='running'){const p=pendBip;pendBip=0;playBip(p)}}
+function playBip(n){
+ try{const o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime,d=n===2?1.2:0.5;
+  o.type='square';o.frequency.value=n===2?440:880;
+  g.gain.setValueAtTime(SUARA_VOL,t);g.gain.exponentialRampToValueAtTime(0.001,t+d);
+  o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d)}catch(e){}
+}
+function bip(n){
+ if(!SUARA)return;
+ if(!AC)audioInit();
+ if(!AC)return;
+ if(AC.state==='running')return playBip(n);
+ pendBip=n;AC.resume().then(flushBip).catch(()=>{});
+}
+// Nyalakan ulang suara setiap kali ada sentuhan / kembali ke halaman (syarat iOS: harus dari gestur pengguna)
+['touchstart','touchend','pointerdown','click'].forEach(e=>document.addEventListener(e,()=>{if(AC&&AC.state!=='running')audioInit()},{passive:true}));
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)audioInit()});
+addEventListener('pageshow',audioInit);
+document.addEventListener('webkitfullscreenchange',audioInit);
+document.addEventListener('fullscreenchange',audioInit);
+function fs(){try{const e=document.documentElement;e.requestFullscreen&&e.requestFullscreen()}catch(e){}}
+function run(){setTimeout(hb,500);
+ app.innerHTML=`<div class="top"><b id="who"></b><span id="tm"></span><span id="vc"></span></div><div class="w"><div class="c" id="qa"></div><div class="c"><div class="mu" style="margin-bottom:8px">Navigasi soal (kuning = soal sekarang, hijau = terjawab)</div><div class="nav" id="nv"></div><div class="row"><span></span><button class="d" onclick="ask()">Kumpulkan Ujian</button></div></div></div>`;
+ $('who').textContent=S.nm+' · '+S.kl;draw();tick();clearInterval(timer);timer=setInterval(tick,1000);
+}
+function tick(){
+ const left=S.start+DUR*60000+(S.extra||0)-Date.now();if(left<=0)return finish('Waktu habis');
+ const m=Math.floor(left/60000),s=Math.floor(left/1000)%60;
+ $('tm').textContent='⏱ '+m+':'+String(s).padStart(2,'0');
+ $('vc').textContent='⚠ '+S.viol.filter(v=>!v.s).length+'/'+MAX;
+ if(!IS_MOBILE){
+  if(!S.done&&!devo&&(outerWidth-innerWidth>220||outerHeight-innerHeight>220)){devo=true;v('Indikasi DevTools / layar terbagi')}
+  else if(outerWidth-innerWidth<=220&&outerHeight-innerHeight<=220)devo=false;
+ }
+}
+const ok=i=>{const q=Q[i],a=S.ans[i];if(q.y==='mt')return a&&q.p.every((_,j)=>a[j]!==undefined&&a[j]!=='');if(q.y==='pk')return a&&a.length;if(q.y==='es')return a&&a.trim().length>0;return a!==undefined};
+function draw(){
+ const qi=S.order[S.i],q=Q[qi],a=S.ans[qi];let h=`<span class="tag">${TY[q.y]}</span> <span class="mu">Soal ${S.i+1} dari ${Q.length}</span><div style="margin-top:12px">${fmt(q.t)}</div>`;
+ if(q.y==='pg')h+=S.perm[qi].map(p=>`<label class="o"><input type="radio" name="r" ${a===p?'checked':''} onchange="set(${qi},${p})">${esc(q.o[p])}</label>`).join('');
+ if(q.y==='pk')h+=`<div class="mu">Boleh memilih lebih dari satu.</div>`+S.perm[qi].map(p=>`<label class="o"><input type="checkbox" ${a&&a.includes(p)?'checked':''} onchange="tog(${qi},${p})">${esc(q.o[p])}</label>`).join('');
+ if(q.y==='bs')h+=[[true,'Logis'],[false,'Tidak logis']].map(([v,l])=>`<label class="o b"><input type="radio" name="r" ${a===v?'checked':''} onchange="set(${qi},${v})">${l}</label>`).join('');
+ if(q.y==='mt')h+=q.p.map((p,j)=>`<div style="margin-top:10px"><b>${esc(p)}</b><select onchange="mset(${qi},${j},this.value)"><option value="">— pilih —</option>${S.perm[qi].map(k=>`<option value="${k}" ${a&&a[j]==k&&a[j]!==''?'selected':''}>${esc(q.o[k])}</option>`).join('')}</select></div>`).join('');
+ if(q.y==='es')h+=`<textarea rows="7" placeholder="Tulis jawaban esai di sini…" oninput="set(${qi},this.value,1)">${esc(a||'')}</textarea>`;
+ h+=`<div class="row"><button class="g" ${S.i?'':'disabled'} onclick="go(-1)">← Sebelumnya</button><button onclick="go(1)" ${S.i<Q.length-1?'':'disabled'}>Berikutnya →</button></div>`;
+ $('qa').innerHTML=h;nav();
+}
+function nav(){$('nv').innerHTML=S.order.map((qi,n)=>`<button class="${ok(qi)?'a':''} ${n===S.i?'n':''}" onclick="S.i=${n};save();draw()">${n+1}</button>`).join('')}
+function set(qi,val,soft){S.ans[qi]=val;save();if(!soft||true)nav()}
+function tog(qi,p){const a=S.ans[qi]||[];S.ans[qi]=a.includes(p)?a.filter(x=>x!==p):a.concat(p);save();nav()}
+function mset(qi,j,val){const a=S.ans[qi]||[];a[j]=val;S.ans[qi]=a;save();nav()}
+function go(d){S.i+=d;save();draw();scrollTo(0,0)}
+function modal(h){let m=$('md');if(!m){m=document.createElement('div');m.id='md';m.className='m';document.body.appendChild(m)}m.innerHTML='<div>'+h+'</div>'}
+function closeM(){const m=$('md');m&&m.remove()}
+function ask(){const n=Q.filter((_,i)=>!ok(i)).length;modal(`<h2>Kumpulkan ujian?</h2><p>${n?`Masih ada <b>${n}</b> soal belum terjawab.`:'Semua soal sudah terjawab.'} Jawaban tidak dapat diubah setelah dikumpulkan.</p><div class="row"><button class="g" onclick="closeM()">Kembali</button><button class="d" onclick="finish('Dikumpulkan siswa')">Ya, kumpulkan</button></div>`)}
+// ===== DETEKSI KECURANGAN =====
+function v(msg,soft){
+ if(!S||S.done||!S.start||locked)return;
+ const now=Date.now();if(now-last<2000)return;last=now;
+ S.viol.push({t:new Date().toLocaleTimeString('id-ID'),m:msg,s:soft?1:0});save();
+ if(soft){return}
+ const c=S.viol.filter(x=>!x.s).length;
+ bip(c>=MAX?2:1);
+ if(c>=MAX)return finish('Melebihi batas pelanggaran');
+ locked=true;modal(`<h2 style="color:var(--er)">⚠ Pelanggaran terdeteksi</h2><p>${esc(msg)}</p><p>Pelanggaran <b>${c} dari ${MAX}</b>. Pada pelanggaran ke-${MAX} ujian otomatis dikumpulkan dan dilaporkan ke guru.</p><button onclick="locked=false;closeM();audioInit();fs();last=Date.now()">Kembali ke ujian</button>`);
+}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)v('Berpindah tab / aplikasi')});
+addEventListener('blur',()=>setTimeout(()=>{if(S&&Date.now()-S.start>3000&&!document.hasFocus()&&!document.hidden)v('Jendela ujian kehilangan fokus')},150));
+document.addEventListener('fullscreenchange',()=>{if(S&&!S.done&&S.start&&!document.fullscreenElement&&document.documentElement.requestFullscreen)v('Keluar dari layar penuh')});
+['copy','cut','paste','dragstart'].forEach(e=>document.addEventListener(e,x=>{if(S&&!S.done){x.preventDefault();v('Mencoba '+(e==='paste'?'menempel':'menyalin')+' teks')}}));
+document.addEventListener('contextmenu',x=>{if(S&&!S.done){x.preventDefault();v('Klik kanan',1)}});
+document.addEventListener('keydown',e=>{
+ if(!S||S.done)return;const k=e.key.toLowerCase(),c=e.ctrlKey||e.metaKey;
+ if(k==='f12'||(c&&e.shiftKey&&['i','j','c'].includes(k))||(c&&['u','s','p','a','c','v','x','f'].includes(k))||k==='printscreen'||(e.altKey&&k==='tab')){
+  e.preventDefault();v('Pintasan terlarang: '+(c?'Ctrl+':'')+e.key,1);if(k==='printscreen'||k==='f12'||(c&&e.shiftKey))v('Mencoba tangkap layar / DevTools')}
+});
+addEventListener('beforeunload',e=>{if(S&&S.start&&!S.done){e.preventDefault();e.returnValue=''}});
+// ===== PENGIRIMAN (penilaian dilakukan di server) =====
+function finish(why){
+ if(S.done)return;S.done=true;S.end=Date.now();S.why=why;save();setTimeout(hb,300);clearInterval(timer);closeM();locked=false;
+ try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}
+ result();kirim();
+}
+const POST=(o)=>fetch(SHEET_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(o)}).then(r=>r.json());
+// jawaban objektif mentah; null = belum dijawab
+function jawab(){return Array.from({length:NO},(_,i)=>{const q=Q[i],a=S.ans[i];
+ if(a===undefined||a===null||a==='')return null;
+ if(q.y==='mt')return q.p.map((_,j)=>a[j]===undefined||a[j]===''?null:a[j]);
+ return a})}
+function payload(){return{a:'submit',id:S.id,sig:S.sig,n:S.nm,k:S.kl,w:Math.round(((S.end||Date.now())-S.start)/60000),why:S.why,v:S.viol,A:jawab(),es:Q.map((q,i)=>q.y==='es'?(S.ans[i]||''):null).filter(x=>x!==null)}}
+function report(){return btoa(unescape(encodeURIComponent(JSON.stringify(payload()))))}
+async function kirim(){
+ const say=t=>{const e=$('st');if(e)e.textContent=t};
+ if(S.sent)return say('✓ Hasil sudah dikirim ke guru.');
+ if(!SHEET_URL)return say('Pengiriman otomatis belum diaktifkan. Kirim kode laporan ke guru.');
+ const GAGAL={sig:'Sesi ujian tidak valid. Kirim kode laporan ke guru.',soal:'Versi soal tidak cocok dengan server. Kirim kode laporan ke guru.'};
+ say('Mengirim jawaban ke server…');
+ try{const j=await POST(payload());
+  if(!j.ok)return say(GAGAL[j.err]||'Server menolak pengiriman. Tekan “Kirim ulang” atau kirim kode laporan ke guru.');
+  S.sent=1;S.res={skor:j.skor,rev:j.rev,esai:j.esai};save();result();
+ }catch(e){say('Gagal mengirim. Periksa koneksi lalu tekan “Kirim ulang”, atau kirim kode laporan ke guru.')}
+}
+function result(){
+ const c=S.viol.filter(x=>!x.s).length,code=report(),sk=S.res?S.res.skor:undefined;
+ const nilai=sk!=null?`<p>Skor pilihan (${NO} soal objektif):</p><div class="big">${sk}<span class="mu">/100</span></div>`
+  :`<p class="mu">${S.sent?'Skor pilihan akan disampaikan oleh guru.':'Jawabanmu sedang dikirim dan dinilai oleh server…'}</p>`;
+ app.innerHTML=`<div class="w"><div class="c"><h1>Ujian selesai</h1><div class="mu">${esc(S.nm)} · ${esc(S.kl)} · ${esc(S.why)}</div>${nilai}<p class="mu">Esai (5 soal) dinilai oleh guru. Pelanggaran tercatat: ${c}, catatan ringan: ${S.viol.length-c}.</p></div>
+ <div class="c"><h2>Pengiriman ke guru</h2><p id="st" class="mu">${S.sent?'✓ Hasil sudah dikirim ke guru.':''}</p><button class="g" onclick="kirim()">Kirim ulang</button><h2 style="margin-top:18px">Kode laporan (cadangan)</h2><p class="mu">Salin kode ini dan kirim ke guru (chat/LMS). Berisi jawaban dan log pelanggaran; guru menilainya lewat Mode Guru.</p><pre id="cd">${code}</pre><button onclick="navigator.clipboard&&navigator.clipboard.writeText($('cd').textContent).then(()=>this.textContent='Tersalin ✓')">Salin kode</button> <button class="g" onclick="localStorage.removeItem(KEY);S=null;login()">Keluar</button></div>${rv()}</div>`;
+}
+let SW=false;
+function rv(){
+ if(!S.res||!S.res.rev)return '';
+ const R=S.res.rev,pos={};S.order.forEach((qi,n)=>pos[qi]=n+1);
+ const L=S.order.filter(qi=>qi<NO);let b=0,p=0,s=0;L.forEach(qi=>{const x=R[qi].s;x===1?b++:x>0?p++:s++});
+ let h=`<h2 style="margin:18px 0 8px">Pembahasan ${NO} soal objektif</h2><p class="mu">✓ Benar: ${b} · ◐ Sebagian: ${p} · ✗ Salah: ${s}. Nomor soal sama dengan nomor saat kamu mengerjakan. Pelajari soal yang salah beserta kuncinya.</p><button class="g" onclick="SW=!SW;result()">${SW?'Tampilkan semua soal':'Tampilkan hanya yang salah'}</button>`;
+ h+=L.filter(qi=>!SW||R[qi].s<1).map(qi=>item(qi,R[qi],true,pos[qi])).join('');
+ if(S.res.esai)h+='<h2 style="margin:18px 0 8px">Esai dan pedoman jawaban</h2>'+S.order.filter(qi=>qi>=NO).map(qi=>`<div class="c"><b>No. ${pos[qi]}</b>${fmt(Q[qi].t)}<div class="mu">Jawabanmu: ${esc(S.ans[qi]||'(kosong)')}</div><div class="mu">Pedoman: <b>${esc(S.res.esai[qi-NO])}</b></div></div>`).join('');
+ return h}
+// ===== PEMBAHASAN (kunci hanya datang dari server) =====
+function tx(i,a){const q=Q[i];
+ if(a===undefined||a===null||a==='')return '(kosong)';
+ if(q.y==='pg')return q.o[a];
+ if(q.y==='pk')return a.length?a.map(x=>q.o[x]).join('; '):'(kosong)';
+ if(q.y==='bs')return a?'Logis':'Tidak logis';
+ return q.p.map((p,j)=>p+' → '+(a[j]===undefined||a[j]===null||a[j]===''?'?':q.o[a[j]])).join(' | ')}
+function item(i,r,own,no){const q=Q[i],sc=own?r.s:0;
+ const st=!own?'':sc===1?'<span style="color:var(--ok)">✓ Benar</span>':sc>0?'<span style="color:var(--wa)">◐ Sebagian</span>':'<span style="color:var(--er)">✗ Salah</span>';
+ return `<div class="c"><b>No. ${no||i+1}</b> ${st}${fmt(q.t)}${own?`<div class="mu">Jawabanmu: ${esc(tx(i,S.ans[i]))}</div>`:''}<div class="mu">Kunci: <b>${esc(tx(i,r.k))}</b></div><div class="mu">${esc(r.x||'')}</div></div>`}
+// ===== MODE GURU (semua data sensitif diminta dari server dengan kata sandi) =====
+function teacher(){app.innerHTML=`<div class="w"><div class="c"><h1>Mode Guru</h1><label>Kata sandi guru<input id="pw" type="password" autocomplete="off"></label><button onclick="cekGuru()">Masuk</button> <button class="g" onclick="S?result():login()">Kembali</button><p id="er" style="color:var(--er)"></p></div></div>`}
+function guruUI(){app.innerHTML=`<div class="w"><div class="c"><h1>Mode Guru</h1><p class="mu">Tempel kode laporan siswa untuk melihat skor, log kecurangan, soal yang salah, dan jawaban esai. Penilaian dihitung ulang di server.</p><textarea id="cd" rows="5" placeholder="Tempel kode laporan…"></textarea><button onclick="decode()">Tampilkan</button> <button class="g" onclick="kunci()">Kunci &amp; nomor soal</button> <button class="g" onclick="GP='';S?result():login()">Keluar</button><div id="rp"></div></div></div>`}
+const rpErr=t=>$('rp').innerHTML=`<p style="color:var(--er)">${t}</p>`;
+async function kunci(){
+ $('rp').innerHTML='<p class="mu">Memuat kunci dari server…</p>';
+ try{const K=await ga({a:'kunci'});if(K.err)return rpErr('Kata sandi tidak valid. Masuk ulang.');
+  $('rp').innerHTML='<hr><h2>Kunci &amp; pembahasan (No. 1–'+NO+')</h2>'+K.kunci.map((k,i)=>item(i,{k,x:K.ex[i]},false)).join('')+'<h2>Kunci esai</h2>'+Q.map((q,i)=>q.y==='es'?`<div class="c"><b>No. ${i+1}</b>${fmt(q.t)}<div class="mu">Kunci: ${esc(K.esai[i-NO])}</div></div>`:'').join('')}
+ catch(e){rpErr('Tidak dapat terhubung ke server.')}}
+async function decode(){
+ let r;try{r=JSON.parse(decodeURIComponent(escape(atob($('cd').value.trim()))))}catch(e){return rpErr('Kode tidak valid.')}
+ $('rp').innerHTML='<p class="mu">Menilai di server…</p>';
+ try{const j=await POST({a:'decode',pw:GP,r});
+  if(j.err)return rpErr(j.err==='auth'?'Kata sandi tidak valid. Masuk ulang.':'Kode tidak valid.');
+  const c=j.v.filter(x=>!x.s).length,st=c>=MAX?['Dicurigai berat','var(--er)']:c>0?['Perlu ditinjau','var(--wa)']:['Aman','var(--ok)'];
+  const sl=j.d.map((x,i)=>x<1?(i+1)+(x>0?' (sebagian)':''):null).filter(Boolean);
+  $('rp').innerHTML=`<hr><h2>${esc(j.n)} · ${esc(j.k)}</h2><p>Skor objektif: <b>${j.skor}/100</b> · Durasi: ${j.w} menit · ${esc(j.why)}<br>Status: <b style="color:${st[1]}">${st[0]}</b> (${c} pelanggaran, ${j.v.length-c} catatan ringan)</p>
+  <p>Soal salah / kurang: <b>${sl.length?sl.join(', '):'tidak ada'}</b></p>
+  <h2>Log pelanggaran</h2>${j.v.length?j.v.map(x=>`<div class="mu">${esc(x.t)} — ${esc(x.m)} ${x.s?'(ringan)':''}</div>`).join(''):'<div class="mu">Tidak ada.</div>'}
+  <h2 style="margin-top:14px">Jawaban esai</h2>${j.es.map((a,i)=>`<div class="c"><b>Esai ${i+1}</b><p style="white-space:pre-wrap">${esc(a||'(kosong)')}</p><div class="mu">Kunci: ${esc(j.esaiKunci[i])}</div></div>`).join('')}`;
+ }catch(e){rpErr('Tidak dapat terhubung ke server.')}
+}
+// ===== KONTROL JARAK JAUH (siswa) =====
+async function hb(){
+ if(!SHEET_URL||!S||!S.start)return;
+ try{const left=Math.max(0,(S.start+DUR*60000+(S.extra||0)-Date.now())/1000|0);
+  const q=new URLSearchParams({a:'hb',id:S.id,n:S.nm,k:S.kl,i:(S.i||0)+1,q:Q.filter((_,x)=>ok(x)).length,v:S.viol.filter(x=>!x.s).length,s:S.done?0:left,d:S.done?1:0});
+  const j=await(await fetch(SHEET_URL+'?'+q)).json();(j.cmds||[]).forEach(doCmd)}catch(e){}
+}
+function doCmd(c){
+ if(!S)return;
+ if(c.op==='add'&&!S.done){S.extra=(S.extra||0)+(+c.val||0)*60000;save();if($('tm'))tick()}
+ if(c.op==='kumpul'&&!S.done)finish('Dikumpulkan oleh guru');
+ if(c.op==='msg')modal(`<h2>Pesan dari guru</h2><p style="white-space:pre-line">${esc(c.val)}</p><button onclick="closeM()">Oke</button>`);
+ if(c.op==='reset'){clearInterval(timer);try{localStorage.removeItem(KEY)}catch(e){}S=null;locked=false;closeM();try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}login('Ujianmu direset oleh guru. Silakan masuk lagi.')}
+}
+setInterval(hb,25000);
+// ===== PANEL KONTROL (guru) =====
+let GP='',lt=null;
+const ga=async o=>(await fetch(SHEET_URL+'?'+new URLSearchParams({...o,pw:GP}))).json();
+function panel(){
+ app.innerHTML=`<div class="w"><div class="c"><h1>Panel Kontrol</h1><div class="mu" id="cf">Memuat…</div>
+ <div class="row" style="justify-content:flex-start;flex-wrap:wrap"><button onclick="ctl('open')">Buka ujian</button><button class="d" onclick="ctl('close')">Tutup ujian</button><button class="g" onclick="tc('all','msg')">Pesan ke semua</button><button class="g" onclick="tc('all','add')">+ Waktu semua</button><button class="g" onclick="tc('all','kumpul')">Kumpulkan semua</button><button class="g" onclick="guruUI()">Periksa laporan</button><button class="g" onclick="clearInterval(lt);login()">Keluar</button></div></div>
+ <div class="c" id="lv"></div></div>`;
+ pull();clearInterval(lt);lt=setInterval(pull,10000);
+}
+async function ctl(op){try{await ga({a:'ctl',op});pull()}catch(e){alert('Gagal menghubungi server.')}}
+async function tc(id,op){let val='';
+ if(op==='add'){val=prompt('Tambah berapa menit?','5');if(!val)return}
+ if(op==='msg'){val=prompt('Isi pesan untuk siswa:');if(!val)return}
+ if(op==='kumpul'&&!confirm('Paksa kumpulkan jawaban '+(id==='all'?'SEMUA siswa yang masih mengerjakan':'siswa ini')+'?'))return;
+ if(op==='reset'&&!confirm('Reset siswa ini? Jawaban di perangkatnya dihapus dan ia harus masuk lagi.'))return;
+ try{await ga({a:'cmd',id,op,val});pull()}catch(e){alert('Gagal menghubungi server.')}}
+function rowH(r,now){const ago=(now-r.t)/1000|0,st=r.d?'Selesai':ago>90?'Offline '+ago+' dtk':'Mengerjakan',col=r.d?'var(--ok)':ago>90?'var(--wa)':'var(--pr)';
+ return `<div style="border-top:2px solid var(--bd);padding:12px 0"><b>${esc(r.n)}</b> · ${esc(r.k)} <span class="tag" style="background:${col};color:#fff">${st}</span>
+ <div class="mu">Soal ke-${r.i} · terjawab ${r.a}/${Q.length} · sisa ${Math.floor(r.s/60)}:${String(r.s%60).padStart(2,'0')} · <b style="color:${r.v?'var(--er)':'inherit'}">pelanggaran ${r.v}/${MAX}</b></div>
+ <div class="row" style="justify-content:flex-start;flex-wrap:wrap;margin-top:8px"><button class="g" onclick="tc(${r.id},'add')">+ Waktu</button><button class="g" onclick="tc(${r.id},'msg')">Pesan</button><button class="g" onclick="tc(${r.id},'kumpul')">Kumpulkan</button><button class="g" onclick="tc(${r.id},'reset')">Reset</button></div></div>`}
+async function pull(){if(!$('lv'))return clearInterval(lt);
+ try{const j=await ga({a:'list'});if(j.err)return;
+  $('cf').innerHTML='Status ujian: <b>'+(j.open?'DIBUKA':'DITUTUP')+'</b> · '+j.rows.length+' siswa tercatat · diperbarui tiap 10 detik';
+  $('lv').innerHTML=j.rows.length?j.rows.sort((a,b)=>b.v-a.v||a.n.localeCompare(b.n)).map(r=>rowH(r,j.now)).join(''):'<span class="mu">Belum ada siswa yang masuk.</span>'}
+ catch(e){$('lv').innerHTML='<span class="mu">Gagal memuat, mencoba lagi…</span>'}}
+async function cekGuru(){const pw=$('pw').value;
+ if(!SHEET_URL)return $('er').textContent='Alamat server (SHEET_URL) belum diisi di file HTML.';
+ GP=pw;try{const j=await ga({a:'list'});if(j.err){GP='';return $('er').textContent='Kata sandi salah.'}panel()}catch(e){$('er').textContent='Tidak dapat terhubung ke server.'}}
+// ===== MULAI =====
+if(S&&S.done){result();if(!S.sent)kirim()}
+else if(S&&S.start){S.viol.push({t:new Date().toLocaleTimeString('id-ID'),m:'Halaman dimuat ulang / ditutup saat ujian',s:0});save();
+ if(S.viol.filter(x=>!x.s).length>=MAX)finish('Melebihi batas pelanggaran');
+ else{run();locked=true;modal(`<h2 style="color:var(--er)">⚠ Halaman dimuat ulang</h2><p>Ini dicatat sebagai pelanggaran (${S.viol.filter(x=>!x.s).length}/${MAX}). Waktu ujian tetap berjalan.</p><button onclick="locked=false;closeM();audioInit();fs();last=Date.now()">Lanjutkan ujian</button>`)}}
+else login();
+</script>
+</body>
+</html>
